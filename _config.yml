@@ -18,6 +18,9 @@ github_username:  wdzajicek
 # include:
 #   - "_pages"
 #   - "_posts"
+plugins:
+  - liquid-md5
+  
 exclude:
   - "gulpfile.js"
   - "node_modules"
