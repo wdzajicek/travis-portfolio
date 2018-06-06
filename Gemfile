@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 
-gem "jekyll"
-gem "jekyll-feed", "~> 0.6"
-gem "minima", "~> 2.0"
+gem 'github-pages', group: :jekyll_plugins
+
+group :local_utils do
+  gem "rake"
+#  gem "travis"
+end
+
 gem 'liquid-md5'
