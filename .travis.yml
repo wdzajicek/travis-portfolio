@@ -1,25 +1,14 @@
 language: ruby
 cache: bundler
 install:
-- bundle install
+  - bundle install
 script: bundle exec jekyll build
 rvm:
-- 2.5.0
-branches:
-  only:
-  - gh-pages
-  - "/pages-(.*)/"
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  matrix:
-    secure: CsuuNG+dseKHcv/UX9gTNVmoYZvO06elf39bJN5+XnzYRS5X/Aa/A8KyLS/Ib1vGzcjCwv06TVWFLIMG9Cj0kZKbKonLR47kn1qpakpXpXsKs+oPRNodG6uouUSQyrZKX0Jps3nMM1OjqzCNWuI3Ao0kgf1583rgnKQo8Zxx9dARjrr1qmAkfpimOiFr5SkvHYb9/50CG/9Lboho8F8xJQtvHK/kp4SYWnBObeKWFpwK7RG5Tn1ByQUTeng/K5rHuIl6wZ7wqSJK7NHiJkw/0piICdmbk5ToXrasJgeNGwJvRr/V5166ggVVHbjFQ92/Rje5kSVSV8Vg1szV22JzJdMLxow8Zst5f5iOCG7SzJu5SBAzPojd8llXqGiwbukYui2pkVextKWQArrAtH06X37msoCm4kCbiDKc1eEef2pWLdFeRhKPRUUVZhppXIl2Og9u770OPm2q8fgtSnP/4tFwokggC/Hc+XaZBqlhEO7iiEDH1s8vOvs8qYueSGpr3mWCkPpNImpPlpc3lYngFGVkq344j8IthBeWbUoD3JkXOXHS2Rske13Rm1dBC3LBLJQIeFV16FR4qSK7xfU/NRSm3cf9V+zQSY7KormTkTDOntr8y/U+K91tVkBkP2XxLljwkP5fWpeSQreOhnjOYwh4AAYKLibTTXEdMx1HI90=
-sudo: false
-notifications:
-  email: true
+  - 2.5.0
 deploy:
   provider: pages
   skip-cleanup: true
+  local-dir: _site/
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
