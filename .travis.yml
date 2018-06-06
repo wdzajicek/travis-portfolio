@@ -13,3 +13,7 @@ deploy:
   keep-history: true
   on:
     branch: master
+branches:
+  only:
+  - gh-pages
+  - /.*/
